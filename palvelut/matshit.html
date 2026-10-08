@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Match – Mätsäykset</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-logo">
+                <img src="logo.jpg" alt="CampusConnect Job Match logo" class="mini-logo">
+                <span>Job Match</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Koti</a></li>
+                <li><a href="profiili.html">Profiili</a></li>
+                <li><a href="matshit.html" class="active">Mätsäykset</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Sinulle poimitut työpaikat</h1>
+        <p>Profiilisi perusteella löysimme seuraavat 100 % yhteensopivat paikat. Klikkaa paikkaa avataksesi keskustelun rekrytoijan kanssa.</p>
+
+        <section class="match-grid">
+            <article class="job-card">
+                <span class="badge">Harjoittelu</span>
+                <h2>Junior UI/UX Designer</h2>
+                <p class="company">Digitoimisto Loiste Oy – Helsinki</p>
+                <p>Etsimme tiimiimme innokasta opiskelijaa suunnittelemaan tulevaisuuden digitaalisia palveluita. Kurssiprojektit katsotaan eduksi!</p>
+                <button class="btn btn-primary btn-full" onclick="alert('Chat-yhteys rekrytoijaan avattu!')">Mätsää ja avaa Chat</button>
+            </article>
+
+            <article class="job-card">
+                <span class="badge">Projekti / Osa-aikainen</span>
+                <h2>Verkkosivujen tekijä / Koodari</h2>
+                <p class="company">KasvuMedia – Etätyö</p>
+                <p>Tarvitsemme apua asiakasprojektien HTML/CSS-toteutuksissa. Sopii täydellisesti opintojen ohessa tehtäväksi.</p>
+                <button class="btn btn-primary btn-full" onclick="alert('Chat-yhteys rekrytoijaan avattu!')">Mätsää ja avaa Chat</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CampusConnect – Saavutettava ja responsiivinen opiskelijapalvelu</p>
+    </footer>
+
+</body>
+</html>

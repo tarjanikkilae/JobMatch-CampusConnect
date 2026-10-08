@@ -1,0 +1,237 @@
+/* --- Perusasetukset & Saavutettavuus --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #F4FBF7; /* Vaalea bränditausta */
+    color: #1A3026; /* Erittäin tumma vihreä – takaa riittävän tekstikontrastin */
+    line-height: 1.6;
+}
+
+/* --- Navigointipalkki (Header) --- */
+header {
+    background-color: #064E3B; /* Primary vihreä */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-bar {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.mini-logo {
+    max-height: 35px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #E2F0E9;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* Saavutettavuus: aktiivisen ja valitun sivun korostus navigaatiossa */
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #FFFFFF;
+    background-color: #059669; /* Secondary vihreä */
+}
+
+/* --- Sivun pääasettelu (Layout) --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #064E3B;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* --- Etusivun Hero-osio --- */
+.hero-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+}
+
+/* --- Painikkeet (Buttons) --- */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: #064E3B;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #043427;
+}
+
+.btn-secondary {
+    background-color: #D97706; /* Accent oranssi */
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+    background-color: #B45309;
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
+
+/* --- Kortit ja Ruudukot (Gridit) --- */
+.info-grid, .match-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.info-card, .job-card, .profile-box {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(6, 78, 59, 0.05);
+    text-align: left;
+}
+
+.job-card h2 {
+    color: #064E3B;
+    margin: 10px 0;
+}
+
+.company {
+    font-weight: 700;
+    color: #059669;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.badge {
+    background-color: #E2F0E9;
+    color: #064E3B;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* --- Luettelot ja Muut --- */
+ul {
+    margin: 15px 0 25px 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+.section-margin {
+    margin-top: 25px;
+}
+
+/* --- Alatunniste (Footer) --- */
+footer {
+    background-color: #064E3B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* --- Responsiivisuus (Mobiililaitteet) --- */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .info-grid, .match-grid {
+        grid-template-columns: 1fr; /* Muuttuu yhdeksi sarakkeeksi puhelimella */
+    }
+}

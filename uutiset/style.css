@@ -1,0 +1,195 @@
+/* --- Projektin brändivärit ja perusasetukset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400; /* Regular */
+    line-height: 1.7;
+    background-color: #F4FBF7; /* Projektisi haaleasti vihreä taustaväri */
+    color: #222222;
+}
+
+/* --- Ylätunniste (Header) --- */
+header {
+    background-color: #064E3B; /* Primary vihreä */
+    color: #FFFFFF;
+    padding: 25px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    margin-left: 10px;
+    color: #059669; /* Secondary vihreä */
+    font-size: 1.1rem;
+}
+
+/* --- Alatunniste (Footer) --- */
+footer {
+    background-color: #064E3B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* --- Pääsisältöalue ja Uutiskortti --- */
+main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.uutinen {
+    background-color: #FFFFFF; /* Surface alue */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(6, 78, 59, 0.06); /* Kevyt vihreään taittava varjo */
+    width: 100%;
+    max-width: 800px;
+}
+
+/* --- Typografia (Otsikot ja tekstit) --- */
+h1 {
+    font-weight: 700; /* Bold */
+    color: #064E3B; /* Primary */
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.ingressi {
+    font-size: 1.2rem;
+    color: #064E3B;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+h2 {
+    font-weight: 700;
+    color: #064E3B;
+    font-size: 1.5rem;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #059669; /* Secondary vihreä viiva otsikon alle */
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* --- Luettelon tyylittely --- */
+ul {
+    margin: 25px 0;
+    padding-left: 20px;
+    list-style-type: none; /* Poistetaan peruspallurat custom-ilmettä varten */
+}
+
+ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Tehdään luettelon palloista tyylikkäät brändiväriset neliöt/pallot */
+ul li::before {
+    content: "•";
+    color: #059669; /* Secondary vihreä */
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+ul li strong {
+    color: #064E3B;
+}
+
+/* --- Kuva-alueen tyylittely (Responsiivinen kuva) --- */
+.kuva-alue {
+    margin: 30px 0;
+    text-align: center;
+    background-color: #F4FBF7;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+img {
+    max-width: 180px; /* Rajataan logon koko järkeväksi */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.kuvateksti {
+    font-size: 0.85rem;
+    color: #064E3B;
+    font-style: italic;
+}
+
+/* --- Siteerauksen muotoilu (Blockquote) --- */
+blockquote {
+    background-color: #F4FBF7;
+    border-left: 5px solid #D97706; /* Accent väri luomaan kontrastia vihreään */
+    padding: 20px;
+    margin: 35px 0;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote cite {
+    display: block;
+    font-size: 0.9rem;
+    color: #059669;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* --- Responsiivinen toteutus (Mobiilinäytöt) --- */
+@media (max-width: 600px) {
+    main {
+        padding: 20px 10px;
+    }
+
+    .uutinen {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .header-content {
+        justify-content: center;
+    }
+    
+    .tagline {
+        display: none; /* Piilotetaan tagline pienimmiltä näytöiltä tilan säästämiseksi */
+    }
+}
